@@ -1,0 +1,65 @@
+---
+import { Icon } from "astro-icon";
+import HeroImage from "~/components/hero-image.astro";
+import type { FooterLink } from "~/types";
+
+const { siteTitle } = Astro.props;
+
+const links: Array<FooterLink> = [
+  {
+    url: "https://github.com/mormor",
+    description: "View source on GitHub",
+    icon: "fa-brands:github-alt",
+  },
+  {
+    url: "https://www.linkedin.com/in/kamil-morkisz/",
+    description: "MorMor on Linkedin",
+    icon: "fa-brands:linkedin",
+  },
+  {
+    url: "https://www.instagram.com/foto.tfurca/",
+    description: "MorMor on Instagram",
+    icon: "fa-brands:instagram",
+  },
+];
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="relative flex h-72 flex-col items-center justify-center md:h-96">
+  <div class="footer-decorator"></div>
+  <div class="absolute inset-0 overflow-hidden opacity-40">
+    <HeroImage />
+  </div>
+  <div class="relative">
+    <ul class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+      <li>
+        <a
+          class="flex h-16 w-16 cursor-pointer items-center justify-center rounded-full border-2 border-current p-4"
+          onclick="window.scrollTo(0, 0)"
+        >
+          <span class="sr-only">MorMor official website</span>
+          <Icon class="h-full" name="mdi:home" />
+        </a>
+      </li>
+      {
+        links.map((link) => (
+          <li>
+            <a
+              class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4"
+              href={link.url}
+            >
+              <span class="sr-only">{link.description}</span>
+              <Icon class="h-full" name={link.icon} />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="absolute right-0 left-0 mt-6 text-center">
+      <span class="m-0 inline-block scale-x-[-1] text-right">&copy;</span>
+      {currentYear}{" "}
+      {siteTitle}
+    </div>
+  </div>
+</footer>

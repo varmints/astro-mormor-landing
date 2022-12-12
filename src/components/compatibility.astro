@@ -1,0 +1,89 @@
+---
+import CompatibilityList from "~/components/compatibility-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { CompatibilityItem } from "~/types";
+
+const frameworks: Array<CompatibilityItem> = [
+  {
+    title: "React",
+    icon: "frameworks/react",
+    url: "https://reactjs.org/",
+  },
+  {
+    title: "Preact",
+    icon: "frameworks/preact",
+    url: "https://preactjs.com/",
+  },
+  {
+    title: "Svelte",
+    icon: "frameworks/svelte",
+    url: "https://svelte.dev/",
+  },
+  {
+    title: "Next",
+    icon: "frameworks/next",
+    url: "https://nextjs.org/",
+  },
+  {
+    title: "Astro",
+    icon: "frameworks/astro",
+    url: "https://astro.build/",
+  },
+  {
+    title: "Vue",
+    icon: "frameworks/vue",
+    url: "https://vuejs.org/",
+  },
+];
+
+const platforms: Array<CompatibilityItem> = [
+  {
+    title: "Netlify",
+    icon: "platforms/netlify",
+    url: "https://www.netlify.com/",
+  },
+  {
+    title: "Vercel",
+    icon: "platforms/vercel",
+    url: "https://vercel.com/",
+  },
+  {
+    title: "Cloudflare",
+    icon: "fa-brands:cloudflare",
+    url: "https://pages.cloudflare.com/",
+  },
+  {
+    title: "Render",
+    icon: "platforms/render",
+    url: "https://render.com/",
+  },
+  {
+    title: "GitHub",
+    icon: "fa-brands:github",
+    url: "https://pages.github.com/",
+  },
+  {
+    title: "GitLab",
+    icon: "fa-brands:gitlab",
+    url: "https://docs.gitlab.com/ee/user/project/pages/",
+  },
+];
+---
+
+<ContentSection title="Nowoczesne technologie" id="compatibility">
+  <Fragment slot="lead">
+    Wykorzystuję <span class="text-primary">frameworki</span>, które najlepiej
+    pasują do <span class="text-primary">Twojego projektu</span>. Natępnie
+    wdrażam projekt na niezawodne <span class="text-primary">platformy</span>.
+  </Fragment>
+  <CompatibilityList
+    items={frameworks}
+    title="Frameworki"
+    url="https://docs.astro.build/core-concepts/framework-components/"
+  />
+  <CompatibilityList
+    items={platforms}
+    title="Platformy"
+    url="https://docs.astro.build/guides/deploy/"
+  />
+</ContentSection>
