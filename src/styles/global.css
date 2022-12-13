@@ -10,7 +10,3 @@ a,
   @apply bg-clip-text text-transparent;
   @apply animate-text bg-gradient-to-br from-indigo-500 via-orange-400  to-indigo-400;
 }
-
-.footer-decorator {
-  @apply absolute left-0 top-0 right-0 z-10 bg-default pb-14 content-[''] clip-path-triangle sm:pb-20;
-}

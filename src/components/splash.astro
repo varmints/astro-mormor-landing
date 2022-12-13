@@ -4,6 +4,7 @@ import { Icon } from "astro-icon";
 import astronautImage from "~/assets/astronaut.png";
 import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
+import Status from "~/components/status.astro";
 
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
@@ -37,6 +38,7 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
         loading="eager"
         alt="A floating astronaut in a space suit"
       />
+      <Status />
     </div>
   </div>
 </section>

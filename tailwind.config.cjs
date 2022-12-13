@@ -40,6 +40,10 @@ module.exports = {
             "background-position": "right center",
           },
         },
+        show: {
+          from: { visibility: "hidden" },
+          to: { visibility: "block" },
+        },
       },
     },
   },
@@ -48,6 +52,7 @@ module.exports = {
   },
   plugins: [
     require("tailwind-clip-path"),
+    require("tailwindcss-animation-delay"),
     require("tailwindcss-fluid-type")({
       // your fluid type settings
       // works only with unitless numbers

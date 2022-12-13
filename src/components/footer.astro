@@ -26,8 +26,11 @@ const links: Array<FooterLink> = [
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="relative flex h-72 flex-col items-center justify-center md:h-96">
-  <div class="footer-decorator"></div>
+<footer class="relative flex h-72 flex-col items-center justify-center md:h-80">
+  <div
+    class="md:pb-24; absolute left-0 top-0 right-0 z-10 bg-default pb-14 content-[''] clip-path-triangle sm:pb-20"
+  >
+  </div>
   <div class="absolute inset-0 overflow-hidden opacity-40">
     <HeroImage />
   </div>

@@ -4,9 +4,10 @@ import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
 
 const navItems: Array<NavItem> = [
-  { title: "Zalety", url: "#features" },
-  { title: "Nowoczesne technologie", url: "#compatibility" },
-  { title: "Przykłady", url: "#showcase" },
+  { title: "Zalety", url: "/#zalety" },
+  { title: "Nowoczesne technologie", url: "/#nowoczesne-technologie" },
+  { title: "Przykłady", url: "/#przyklady" },
+  { title: "Kontakt", url: "/kontakt" },
 ];
 ---
 
@@ -21,7 +22,7 @@ const navItems: Array<NavItem> = [
   <div>
     <div class="flex items-center gap-6">
       <nav class="hidden sm:block">
-        <ul class="flex items-center gap-6">
+        <ul class="flex flex-wrap items-center justify-end gap-6">
           {
             navItems.map(({ title, url }) => (
               <li>
