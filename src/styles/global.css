@@ -10,3 +10,7 @@ a,
   @apply bg-clip-text text-transparent;
   @apply animate-text bg-gradient-to-br from-indigo-500 via-orange-400  to-indigo-400;
 }
+
+.gradient-form-bg {
+  @apply animate-gradient-x bg-gradient-to-br from-indigo-500 via-orange-400  to-indigo-400;
+}

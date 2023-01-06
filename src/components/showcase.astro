@@ -15,10 +15,8 @@ const sites = await getShowcase();
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       {sites.map((site) => <ShowcaseCard site={site} />)}
     </div>
-    <p class="text-right text-sm">
-      <a class="text-primary" href="https://astro.build/showcase/">
-        ...i więcej &rarr;
-      </a>
-    </p>
+    <!-- <p class="text-right text-sm">
+      <a class="text-primary" href="#"> ...i więcej &rarr;</a>
+    </p> -->
   </div>
 </ContentSection>

@@ -1,0 +1,25 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import ContactForm from "./ContactForm";
+---
+
+<ContentSection title="Kontakt" id="kontakt">
+  <Fragment slot="lead">
+    Jeśli chcesz się tylko <span class="text-primary"
+      >przywitać i porozmawiać</span
+    > o kilku pomysłach, z przyjemnością przyjmę to połączenie.
+  </Fragment>
+  <div class="flex w-full max-w-xl flex-col justify-center py-6">
+    <div class="relative mx-auto w-full py-3">
+      <div
+        class="gradient-form-bg absolute inset-0 -rotate-6 skew-y-0 transform rounded-3xl"
+      >
+      </div>
+      <div
+        class="relative rounded-3xl border border-default bg-offset px-4 py-14 sm:px-10"
+      >
+        <ContactForm client:visible />
+      </div>
+    </div>
+  </div>
+</ContentSection>
