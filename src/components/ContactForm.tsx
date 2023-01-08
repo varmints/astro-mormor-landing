@@ -126,14 +126,15 @@ const ContactForm = () => {
               Treść wiadomości
             </label>
           </div>
-          <div>
+          <div className="flex flex-col items-center">
+            <div>Sprawdzam czy nie jesteś robotem...</div>
             <Turnstile
               sitekey={captchaKey}
               onVerify={updateCaptchaToken}
               theme="dark"
             />
           </div>
-          <div>
+          <div className="flex justify-center">
             <button
               disabled={submitting}
               className="flex items-center justify-center gap-3 border-2 border-current px-6 py-4 hover:text-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-transparent"
