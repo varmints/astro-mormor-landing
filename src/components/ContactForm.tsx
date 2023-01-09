@@ -14,7 +14,7 @@ type ServiceMessage = {
 const ContactForm = () => {
   const formId = "zjyGPPkG";
   const formSparkUrl = `https://submit-form.com/${formId}`;
-  const captchaKey = "1x00000000000000000000AA";
+  const captchaKey = "0x4AAAAAAAB45MXKoTcf0Pxb";
 
   const initialFormState = {
     email: "",
