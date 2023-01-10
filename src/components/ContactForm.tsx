@@ -49,14 +49,14 @@ const ContactForm = () => {
         body: JSON.stringify(payload),
       });
       console.log(result);
-      if (result.ok) {
-        setMessage({
-          class: "bg-green-700",
-          text: "Dzięki, wkrótce się skontaktuję.",
-        });
-        setFormState(initialFormState);
+      if (!result.ok) {
+        throw new Error("Something went wrong.");
       }
-      throw new Error("Something went wrong.");
+      setMessage({
+        class: "bg-green-700",
+        text: "Dzięki, wkrótce się skontaktuję.",
+      });
+      setFormState(initialFormState);
     } catch (error) {
       console.log(error);
       setMessage({
