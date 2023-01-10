@@ -14,7 +14,7 @@ import "~/styles/index.css";
 const { generator, site } = Astro;
 // const image = new URL("social.jpg", site);
 const siteTitle = "MorMor";
-const description = "Build fast websites, faster.";
+const description = "Build fast websites, faster with me. MorMor is here.";
 ---
 
 <!DOCTYPE html>
@@ -23,6 +23,7 @@ const description = "Build fast websites, faster.";
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
     <meta name="generator" content={generator} />
     <title>{siteTitle} - strony internetowe</title>
 

@@ -37,13 +37,13 @@ const currentYear = new Date().getFullYear();
   <div class="relative">
     <ul class="grid grid-cols-2 gap-4 sm:grid-cols-4">
       <li>
-        <a
+        <button
           class="flex h-16 w-16 cursor-pointer items-center justify-center rounded-full border-2 border-current p-4"
           onclick="window.scrollTo(0, 0)"
         >
           <span class="sr-only">MorMor official website</span>
           <Icon class="h-full" name="mdi:home" />
-        </a>
+        </button>
       </li>
       {
         links.map((link) => (
